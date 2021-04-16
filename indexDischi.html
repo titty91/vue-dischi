@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="styleDischi.css">
+    <script src="mainDischi.js"></script>
+    <title>Dischi Tiziana</title>
+  </head>
+
+  <body>
+
+      <h1 class="title">
+        ARTISTI
+      </h1>
+
+    <main id="app" class="contain">
+      <div class="">
+        <select v-model="allSelect" class="" name="generi">
+            <option value="All">All</option>
+            <option value="Rock">Rock</option>
+            <option value="Pop">Pop</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Metal">Metal</option>
+        </select>
+      </div>
+
+      <div  v-for="pippo in pippos" id="app" class="disco">
+        <div v-if="allSelect == pippo.genre || allSelect =='All'" class="">
+          <img :src="pippo.poster" alt="">
+          <div class="">
+            <p>{{pippo.title}}</p>
+            <p>{{pippo.author}}</p>
+            <p>{{pippo.genre}}</p>
+            <p>{{pippo.year}}</p>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>
