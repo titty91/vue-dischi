@@ -22,7 +22,7 @@ body{
 .contain{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:center;
 }
 
 .disco{
@@ -31,8 +31,8 @@ body{
   text-align: center;
   width: 200px;
   height: auto;
-  background-color: lightgrey;
-
+  color: lightgrey;
+  margin: 0 10px;
 }
 
 .disco img{
